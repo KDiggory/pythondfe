@@ -15,3 +15,5 @@ elif mark >= 65 and mark <= 85:
     print("Pass")
 else:
     print("Fail")
+
+
