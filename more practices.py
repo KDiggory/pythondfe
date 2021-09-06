@@ -38,8 +38,23 @@ list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
    ##Implement a function that takes input of 3 variables and returns the largest of the 3 without using the max() function
 # will need variables and if statements
-var1 = int(input("first number pleaase "))
-var2 = int(input("Second number please "))
-var3 = int(input("And your last number "))
 
-if 
+##this should work - from solution page but can't seem to get it working! 
+a = int(input("first number pleaase "))
+b = int(input("Second number please "))
+c = int(input("And your last number "))
+
+def maxThree(a,b,c):
+    max3 = 0
+    if a>b:
+        max3=a
+        if a>c:
+            max3=c
+        else:
+            max3=a
+    else:
+        if b>c: 
+            max3=b
+        else:
+            max3=c
+    print(max3)
