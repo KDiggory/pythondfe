@@ -26,5 +26,3 @@ if divisorVar == testPrime:
     print(f"{testPrime}  is prime")
 else:
     print(f"{testPrime}  is not a prime")
-
-
