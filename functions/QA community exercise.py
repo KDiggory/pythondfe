@@ -21,12 +21,21 @@ def grade_calc(total_score):
    
 nameVar = (input("Enter your name: "))
 hw = int(input("Enter your homework score: "))
+if hw > 25: # this checks if the score given is within the possible score
+    print("Score not possible out of 25") ## this line prints an error if the number given is higher than the possible score 
+    exit() # this exits without asking for anything else
 ass = int(input("Enter your assessment score: "))
+if ass > 50:
+    print("Score not possible out of 50")
+    exit()
 exam = int(input("Enter your exam results: "))
+if exam > 100:
+    print("Score not possible out of 100")
+    exit()
 
 totalpercentage = total_score(nameVar, hw, ass, exam) ## need to assign the returned variable to a variable that can be used outside the function
 totalgrade = grade_calc(totalpercentage)
-print(f"{nameVar} got an overall percentage of {totalpercentage}, this is: {totalgrade}")
+print(f"{nameVar} got an overall percentage of {totalpercentage}, your grade is: {totalgrade}")
 
 
 
