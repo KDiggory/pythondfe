@@ -6,20 +6,21 @@
 #  make sure name (the input) is validated - this is often hard in programming. Keep this simple. make sure name isnt numbers .isdigit
 #  do maths with the numbers
 
-vowels =["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
+vowels =["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"] ## dont need to put capitals and lower if you use lower.variable on your input
+#this could also be written as vowels ="aeiou"
 
 def name_calculator(name1, name2):
     len1 = len(name1)
     len2 = len(name2)
     count1 = 0
     count2 = 0
+    total = 0
     for l in name1:
         if l in vowels:
             count1 = count1 +1
     for l in name2:
         if l in vowels:
             count2 = count2 +1
-    total = 0
     lens = len1 + len2
     counts = count1 + count2 
     counts = counts *5

@@ -33,14 +33,12 @@ nameVar = (input("Enter your name: "))
   
 homework = checkscore("Homework score: ", 25)
 assessment = checkscore("Assessment score: ", 50)
-examscore = checkscore("Final exam score", 100)
+examscore = checkscore("Final exam score: ", 100)
 
 
 hw = checkscore("Homework score: ", 25)
 ass = checkscore("Assessment Score: ", 50)
 exam = checkscore("Exam score: ", 100)
-
-    
 
 totalpercentage = 0
 totalpercentage = total_score(nameVar, hw, ass, examscore) ## need to assign the returned variable to a variable that can be used outside the function
