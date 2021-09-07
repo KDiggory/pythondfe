@@ -1,9 +1,9 @@
-def total_score(name,homework,assessment,final_exam):
-    total = hw + ass + exam
+def total_score(homework,assessment,final_exam):
+    total = homework + assessment + final_exam
     totalperc = (total/175) * 100
     return totalperc
 
-def grade_calc(total_score):
+def grade_calc(totalpercentage):
     if totalpercentage > 80:
         grade = "A"
     elif totalpercentage >=70:
@@ -26,8 +26,7 @@ def checkscore(question, thelimit):
         if var1 > thelimit:
             print("That is too high, try again")
         else:
-            break
-        return var1
+            return var1
 
 nameVar = (input("Enter your name: "))
   
@@ -36,12 +35,8 @@ assessment = checkscore("Assessment score: ", 50)
 examscore = checkscore("Final exam score: ", 100)
 
 
-hw = checkscore("Homework score: ", 25)
-ass = checkscore("Assessment Score: ", 50)
-exam = checkscore("Exam score: ", 100)
-
 totalpercentage = 0
-totalpercentage = total_score(nameVar, hw, ass, examscore) ## need to assign the returned variable to a variable that can be used outside the function
+totalpercentage = total_score(homework, assessment, examscore) ## need to assign the returned variable to a variable that can be used outside the function
 totalgrade = grade_calc(totalpercentage)
 print(f"{nameVar} got an overall percentage of {totalpercentage}, your grade is: {totalgrade}")
 
