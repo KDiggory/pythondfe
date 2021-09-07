@@ -1,7 +1,9 @@
 def dice_roll():
     import random
     number = random.randint(0,6)
-    return number
+    number2 = random.randint(0,6)
+    return number, number2
+   
 
 
 def d10():
