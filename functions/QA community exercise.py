@@ -14,11 +14,12 @@ def grade_calc(total_score):
         grade = "D"        
     elif totalpercentage >= 40:
         grade = "E"
+    elif totalpercentage >= 30:
+        grade = "F"
     else:
         grade = "FAIL"
     return grade
-
-   
+ 
 nameVar = (input("Enter your name: "))
 hw = int(input("Enter your homework score: "))
 if hw > 25: # this checks if the score given is within the possible score
