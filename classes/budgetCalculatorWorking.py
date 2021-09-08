@@ -50,6 +50,7 @@ class budgetApp:
 
 #var = test.deposit()
 
+## could use subclasses>!!
 
 
     
