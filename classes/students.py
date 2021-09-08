@@ -42,4 +42,4 @@ greetstudentC = studentC.greeting()
 schoolYearC = studentC.yearGroup()
 ethicC = studentC.working()
 
-
+print(getattr(str(studentA.name), studentA.year))  # cant get this to work
