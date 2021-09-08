@@ -18,15 +18,15 @@ class budgetApp:
     def __init__(self, name):
         self.name = name 
         self.balance = float(input(f"Enter budget for {name} :"))
-        self.reciepts = []
+        self.reciepts = []  
 
-    def deposit(self, depositValue):
+    def deposit(self):
         depositAmount = int(input("How much would you like to deposit? "))
         if depositAmount == "":
             print("Deposit cancelled")
         else:
-            self.balance += depositValue 
-            print(f"Thank you for depositing {depositValue}")
+            self.balance += depositAmount 
+        print(f"Thank you for depositing {depositAmount}")    
 
 
     def withdraw(self, spent):
@@ -43,4 +43,6 @@ class budgetApp:
             print(f"Insufficient funds, please make a transfer into the {other} account")
         elif amount < self.balance:
             self.balance -= amount
-            other.balance += amount
+            other.balance += amount 
+
+    
