@@ -146,4 +146,6 @@ def restart():
 def quit():
     exit()
 
-start()
+
+test = budgetApp("test")
+start(test)
