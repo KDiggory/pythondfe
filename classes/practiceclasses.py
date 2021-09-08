@@ -1,31 +1,31 @@
 # create class and subclass objects which represent different geometrical shapes such as rectangele and squarec
 import math
 class shapes:
-    def __init__(self):
+    #def __init__(self):
         #self.dim = dim
         #print("2D or 3D? Type 2 or 3 please: ")
         #self.dim = dim
         #self.dim = input(">")
-        def dimension(self):
-            print("2D or 3D? Type 2 or 3 please: ")
-            dim = input(">")
+    def dimen(self, dim):
+        print("2D or 3D? Type 2 or 3 please: ")
+        self.dim = dim
+        self.dim = str(input(">"))
 
-        
-        
 class square(shapes):
-    def __init__(self, sideLen, dim):
+    def __init__(self, sideLen):
         self.sideLen = sideLen
-        shapes().__init__(dim)
+        shapes().dimen("dim")
 
     def sq_area(self):
-        if shapes.__init__(2) == 2: ## this line is giving me issues
+
+        if shapes().dimen(2) == 2: ## this line is giving me issues
             area_sq = self.sideLen * self.sideLen
             return area_sq  
-        elif shapes.__init__(3) == 3:
+        elif shapes().dimen(3) == 3:
             area_sq = self.sideLen ** self.sideLen 
             return area_sq
         else:
-            print(f"I can only calculate 2D or 3D area unfortunately, not {self.dim}D")
+            print("I can only calculate 2D or 3D area unfortunately")
 
 
 
@@ -63,8 +63,8 @@ class circle:
 #print(tritest) # comes out as one, which is right
 
 #testsq = square(5)
-testsh = square(shapes)
-testsh2 = testsh.sq_area(5,2)
+testsh = square(shapes())
+testsh2 = testsh.sq_area() # 
 print(testsh2)
 #sqtest = testsq.sq_area()#
 #sqtest3 = testsq.sq_area()
