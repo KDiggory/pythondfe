@@ -1,27 +1,29 @@
 # create class and subclass objects which represent different geometrical shapes such as rectangele and squarec
+# worked well until adding the superclass :( 
+
 import math
-class shapes:
+class shapes():
     #def __init__(self):
         #self.dim = dim
         #print("2D or 3D? Type 2 or 3 please: ")
         #self.dim = dim
         #self.dim = input(">")
-    def dimen(self, dim):
+    def dimen(self):
         print("2D or 3D? Type 2 or 3 please: ")
-        self.dim = dim
-        self.dim = str(input(">"))
+        self.dim = 0
+        self.dim = int(input(">"))
 
 class square(shapes):
-    def __init__(self, sideLen):
+    def __init__(self, sideLen, dim):
         self.sideLen = sideLen
-        shapes().dimen("dim")
+        self.dim = 2
+        self.dim = shapes.dimen(self)
 
     def sq_area(self):
-
-        if shapes().dimen(2) == 2: ## this line is giving me issues
+        if self.dim == 2: ## this line is giving me issues
             area_sq = self.sideLen * self.sideLen
             return area_sq  
-        elif shapes().dimen(3) == 3:
+        elif self.dim == 3:
             area_sq = self.sideLen ** self.sideLen 
             return area_sq
         else:
@@ -62,10 +64,11 @@ class circle:
 #tritest = test.tri_area()
 #print(tritest) # comes out as one, which is right
 
-#testsq = square(5)
-testsh = square(shapes())
-testsh2 = testsh.sq_area() # 
+#testsq = square(5, dim=2)
+testsh = square(5,2)  ## dont need to call the superclass, the subclass inherits anyway, doesnt need calling
+testsh2 = testsh.sq_area()
 print(testsh2)
+#help(testsh)
 #sqtest = testsq.sq_area()#
 #sqtest3 = testsq.sq_area()
 #print(sqtest3) # comes out as 25 which is right
