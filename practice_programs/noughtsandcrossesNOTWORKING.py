@@ -2,15 +2,11 @@ import random
 number = random.randint(1,10) ## set the number variable as a number between 1 and 100
 guess = None
 
-
 class Game:
     def __init__(self):
         print("Welcome to noughts and crosses")
         print("Are you ready to play?")
         print("Good luck")
-
-    
-
 
 class turnnum(Game):
 
@@ -18,8 +14,10 @@ class turnnum(Game):
         self.board = "_","_","_", "_","_","_", "_","_","_"
         self.boardnums = "1","2","3", "4","5","6", "7","8","9" 
         numBoard = ("\n".join(map(" ".join, zip(*[iter(self.board)] * 3))))
+        self.choicesMade = []
         self.start()
-        return numBoard
+        
+        return numBoard, self.choicesMade
 
     def start(self):
         print("Which square would you like to put your x in??")
@@ -47,8 +45,6 @@ class turnnum(Game):
             print("Thats not a valid number")
             exit()
 
-
-
     def turn1(self):
         index = self.choice -1
         tempvarboard = list(self.boardnums)
@@ -63,17 +59,18 @@ class turnnum(Game):
         self.tempvarchoice = "".join(tempvarchoice)
         choicePos = ("\n".join(map(" ".join, zip(*[iter(self.board)] * 3))))
         #print(choicePos)
+        choiceString = str(self.choice)
+        self.choicesMade = str(self.choicesMade)
+        self.choicesMade = self.choicesMade + choiceString
         self.compchoice1()
-        return self.tempvarchoice, self.tempvarboard
+        return self.tempvarchoice, self.tempvarboard, self.choicesMade
     
     def compchoice1(self):
-        self.compChoice = random.choice([i for i in range(1,10) if i not in [self.choice]]) 
+        self.compChoice = random.choice([i for i in range(1,10) if i not in [self.choicesMade]]) 
         print(f"The computer chose position {self.compChoice}")
-        #print(self.compChoice)
+        
         indexC = (self.compChoice - 1)
-        #print(f"index number {indexC}")
-        #print(self.tempvarboard)
-        #print(self.tempvarchoice)
+        
         tempvarboard = list(self.tempvarboard)
         #print(self.tempvarboard)
         tempvarboard[indexC] = "-"
@@ -88,8 +85,12 @@ class turnnum(Game):
         #print(self.tempvarchoice2)
         choicePos = ("\n".join(map(" ".join, zip(*[iter(self.tempvarchoice)] * 3))))
         print(choicePos)
+        choiceStringComp = str(self.compChoice)
+        self.choicesMade = str(self.choicesMade)
+        self.choicesMade = self.choicesMade + choiceStringComp
+
         self.mid_game()
-        return self.tempvarchoice, self.tempvarboard
+        return self.tempvarchoice, self.tempvarboard, self.choicesMade
 
         
     def turn2(self):
@@ -106,11 +107,15 @@ class turnnum(Game):
         self.tempvarchoice = "".join(tempvarchoice)
         choicePos = ("\n".join(map(" ".join, zip(*[iter(self.tempvarboard)] * 3))))
         #print(choicePos)
+        choiceString = str(self.choice)
+        self.choicesMade = str(self.choicesMade)
+        self.choicesMade = self.choicesMade + choiceString
         self.compchoice2()
-        return self.tempvarchoice, self.tempvarboard
+        return self.tempvarchoice, self.tempvarboard, self.choicesMade
 
     def compchoice2(self):
-        self.compChoice = random.choice([i for i in range(1,10) if i not in [self.choice]]) 
+        self.choicesMade 
+        self.compChoice = random.choice([i for i in range(1,10) if i not in [self.choicesMade]]) 
         print(f"The computer chose position {self.compChoice}")
         #print(self.compChoice)
         indexC = (self.compChoice - 1)
@@ -130,8 +135,11 @@ class turnnum(Game):
         self.tempvarchoice = "".join(tempvarchoice)
         choicePos = ("\n".join(map(" ".join, zip(*[iter(self.tempvarchoice)] * 3))))
         print(choicePos)
+        choiceStringComp = str(self.compChoice)
+        self.choicesMade = str(self.choicesMade)
+        self.choicesMade = self.choicesMade + choiceStringComp
         self.mid_game()
-        return self.tempvarchoice, self.tempvarboard
+        return self.tempvarchoice, self.tempvarboard, self.choicesMade
 
 
 
