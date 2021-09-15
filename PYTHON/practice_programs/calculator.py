@@ -14,13 +14,12 @@ def numbers():
         num3 = float(input(">"))
     elif "n" in answer:
         print("Great, I can work with just 2 numbers!")
-
     calculation()
     return num1, num2, num3
 
 class Calculation(UserInput):
-    def calculation()
-    print("What kind of calculation would you like to do")
+    def calculation():
+        print("What kind of calculation would you like to do")
 
 class ComplicatedCalculation(UserInput):
 
