@@ -1,7 +1,5 @@
-import random
-computer_choices = ["rock", "paper", "scissors"]
-#import pdb
-#pdb.set_trace()
+import random # import random so you can get the computer to choose rock paper or scissors
+computer_choices = ["rock", "paper", "scissors"] # the things for the computer to select from
 
 wins = 0
 losses = 0
@@ -105,11 +103,7 @@ def paper():
         in_game()
     else: # comp == "scissors":
         print("no match error")
-        #print("Scissors cut paper, you lose PAPER ERROR")
-       # counter += 1
-        #losses += 1
-       # in_game()
-        #play_again()
+        
     return counter, ties, losses, wins, games
 
 def scissors():
@@ -136,10 +130,7 @@ def scissors():
     else: # comp == "paper":
         print("no match error")
         #print("Scissors cut paper, you win!")
-        #counter += 1
-        #wins += 1
-        #in_game()
-            #play_again()
+    
     return counter, ties, losses, wins, games
     
     

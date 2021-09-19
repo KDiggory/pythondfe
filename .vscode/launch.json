@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "pythondfe_64359c33"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloWorld",
+            "request": "launch",
+            "mainClass": "JAVA.HelloWorld",
+            "projectName": "pythondfe_64359c33"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

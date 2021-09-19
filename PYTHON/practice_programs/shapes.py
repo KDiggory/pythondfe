@@ -1,13 +1,9 @@
 # create class and subclass objects which represent different geometrical shapes such as rectangele and squarec
-# worked well until adding the superclass :( 
+
 import math
 
 class shapes():
-    #def __init__(self):
-        #self.dim = dim
-        #print("2D or 3D? Type 2 or 3 please: ")
-        #self.dim = dim
-        #self.dim = input(">")
+  
     def dimen(self):
         print("2D or 3D? Type 2 or 3 please: ")
         self.dim = int(input(">"))
@@ -91,13 +87,13 @@ rectangle_test = rectangle(1,2)
 rectangle_test = rectangle_test.rec_area()
 print(rectangle_test)
 
-#circle_test = circle(2)
-#circle_test = circle_test.cir_area()
-#print(circle_test)
+circle_test = circle(2)
+circle_test = circle_test.cir_area()
+print(circle_test)
 
-#tri_test = triangle(2,3)
-#tri_test = tri_test.tri_area()
-#print(tri_test)
+tri_test = triangle(2,3)
+tri_test = tri_test.tri_area()
+print(tri_test)
 
 
 
